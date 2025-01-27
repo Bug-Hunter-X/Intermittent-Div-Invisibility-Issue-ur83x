@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    document.getElementById("myDiv").style.display = "none"; // hides the div
+    setTimeout(function(){
+      document.getElementById("myDiv").style.display = "block"; // shows the div after a delay, but sometimes fails
+    }, 1000);
+  </script>
+</body>
+</html>
