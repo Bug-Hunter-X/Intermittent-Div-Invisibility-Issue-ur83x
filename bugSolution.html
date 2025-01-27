@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv" class="hidden">
+    This text should be visible.
+  </div>
+  <script>
+    setTimeout(function() {
+      document.getElementById("myDiv").classList.remove("hidden");
+    }, 1000);
+  </script>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</body>
+</html>
